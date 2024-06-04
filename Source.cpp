@@ -36,7 +36,7 @@ public:
                 newTable[newHash].push_back(node);
             }
         }
-        delete[] table; // Освобождаем память от старой таблицы
+        delete[] table; 
         table = newTable;
         size = newSize;
     }
@@ -195,37 +195,37 @@ int main() {
 
     performExperiments();
 
-    //MyHashMap<int, std::string> myMap;
+    MyHashMap<int, std::string> myMap;
 
-    //myMap.insert(1, "One");
-    //myMap.insert(11, "Eleven");
-    //myMap.insert(2, "Two");
-    //myMap.insert(3, "Three");
-    //myMap.insert(13, "Thirteen");
+    myMap.insert(1, "One");
+    myMap.insert(11, "Eleven");
+    myMap.insert(2, "Two");
+    myMap.insert(3, "Three");
+    myMap.insert(13, "Thirteen");
 
-    //myMap.print();
+    myMap.print();
 
-    //myMap.insert_or_assign(2, "NewTwo");
-    //myMap.insert_or_assign(4, "Four");
+    myMap.insert_or_assign(2, "NewTwo");
+    myMap.insert_or_assign(4, "Four");
 
-    //myMap.print();
+    myMap.print();
 
-    //std::cout << "Contains 'Two': " << myMap.contains("Two") << std::endl;
-    //std::cout << "Contains 'Five': " << myMap.contains("Five") << std::endl;
+    std::cout << "Contains 'Two': " << myMap.contains("Two") << std::endl;
+    std::cout << "Contains 'Five': " << myMap.contains("Five") << std::endl;
 
-    //int key = 3;
-    //std::string* value = myMap.search(key);
-    //if (value) {
-    //    std::cout << "Value for key " << key << ": " << *value << std::endl;
-    //}
-    //else {
-    //    std::cout << "Key not found" << std::endl;
-    //}
+    int key = 3;
+    std::string* value = myMap.search(key);
+    if (value) {
+        std::cout << "Value for key " << key << ": " << *value << std::endl;
+    }
+    else {
+        std::cout << "Key not found" << std::endl;
+    }
 
-    //std::cout << "Erasing key 3: " << myMap.erase(3) << std::endl;
-    //std::cout << "Erasing key 5: " << myMap.erase(5) << std::endl;
+    std::cout << "Erasing key 3: " << myMap.erase(3) << std::endl;
+    std::cout << "Erasing key 5: " << myMap.erase(5) << std::endl;
 
-    //std::cout << "Count of key 2: " << myMap.count(2) << std::endl;
+    std::cout << "Count of key 2: " << myMap.count(2) << std::endl;
 
     return 0;
 }
